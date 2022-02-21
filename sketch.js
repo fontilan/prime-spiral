@@ -5,6 +5,7 @@ let numSteps = 1;
 let state = 0;
 let turnCounter = 1;
 let totalSteps;
+let size;
 
 // this function checks whether or not a given number is a prime number - it can most likely be optimized for faster finding
 function checkPrime(number) {
@@ -20,9 +21,10 @@ function checkPrime(number) {
 }
 
 function setup() {
-  createCanvas(800, 800);
+  size = min(0.8 * windowWidth, 0.8 * windowHeight);
+  createCanvas(size, size);
   background(250);
-  stepSize = width / 200;
+  stepSize = width / 80;
   x = width / 2;
   y = height / 2;
   px = x;
@@ -33,17 +35,17 @@ function setup() {
 }
 
 function draw() {
-  frameRate(60);
+  //frameRate(120);
   fill("#94bbe9");
   stroke("#94bbe9");
-  strokeWeight(stepSize / 8);
+  strokeWeight(stepSize / 40);
 
   textAlign(CENTER, CENTER);
   textSize(stepSize / 2);
 
-  // line(x, y, px, py);
-  // px = x;
-  // py = y;
+  line(x, y, px, py);
+  px = x;
+  py = y;
 
   //we only draw the circle if the number (step) is prime
   if (checkPrime(step)) {
