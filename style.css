@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgb(238, 174, 202) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+canvas {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
