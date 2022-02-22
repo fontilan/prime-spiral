@@ -21,7 +21,7 @@ function checkPrime(number) {
 }
 
 function setup() {
-  size = min(0.8 * windowWidth, 0.8 * windowHeight);
+  size = min(0.95 * windowWidth, 0.95 * windowHeight);
   createCanvas(size, size);
   background(250);
   stepSize = width / 80;
@@ -38,10 +38,10 @@ function draw() {
   //frameRate(120);
   fill("#94bbe9");
   stroke("#94bbe9");
-  strokeWeight(stepSize / 40);
+  strokeWeight(stepSize / 8);
 
-  textAlign(CENTER, CENTER);
-  textSize(stepSize / 2);
+  // textAlign(CENTER, CENTER);
+  // textSize(stepSize / 2);
 
   line(x, y, px, py);
   px = x;
